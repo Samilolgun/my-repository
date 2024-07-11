@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: |
+
+
+#Parameters:
+  
+Resources:
+
+  rDatabaseServer:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: String
+      AllowMajorVersionUpgrade: Boolean
+      AutoMinorVersionUpgrade: Boolean
+      BackupRetentionPeriod: Integer
+      DBInstanceClass: String
+      DBInstanceIdentifier: String
+      DBName: String
+      DBSubnetGroupName: String
+      Engine: String
+      EngineVersion: String
+      MasterUsername: String
+      MasterUserPassword: String
+      MultiAZ: Boolean
+      Port: String
+      PubliclyAccessible: Boolean
+      StorageType: String
+      VPCSecurityGroups: 
+        - String
+
+        
+#Outputs:
+

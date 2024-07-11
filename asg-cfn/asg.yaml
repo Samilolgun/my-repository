@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: 2010-09-09
+
+Description: |
+  Load balancer and autoscaling group for web application
+  
+#Parameters:
+  
+Resources:
+
+  rLbSecGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Allow HTTP Traffic
+      GroupName: AllowHTTP
+      SecurityGroupIngress: 
+        - CidrIp: 0.0.0.0/0
+          IpProtocol: tcp
+          FromPort: 80
+          ToPort: 80
+      Tags: 
+        - Key: Name
+          Value: lb-allow-http
+  
+#Outputs:
